@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import TodoList from "./src/features/todo/components/TodoList/TodoList";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={styles.app}>
+      <TodoList />
+
       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  app: {
     flex: 1,
-    backgroundColor: '#fff',
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }
 });
